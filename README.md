@@ -18,26 +18,41 @@ will also begin to understand how Functional Interfaces allow behaviors to be
 encapsulated. This is the first step toward thinking in more declarative code.
 For all exercises, the Java 8+ Lambdas and Streams API must be used.
 
-Level 2: Now that you have the fundamentals, you will focus on transforming 
-collections in a more complex and expressive way. You will work with more specific 
-conditions, combined operations, and direct modifications of elements. Additionally, 
-you will create functional interfaces to represent arithmetic operations as reusable 
-functions, approaching the functional paradigm.
+### Implementation
+ - Ex.1: Use filter(country -> country.toLowerCase().contains("o")) and forEach() 
+ to display countries with 'o'.
+- Ex.2: Chain filter() with conditions country.toLowerCase().contains("o") && 
+country.length() == 5.
+- Ex.3: Use forEach(month -> System.out.println(month)) to iterate through 
+months list.
+- Ex.4: Replace lambda with method reference forEach(System.out::println).
+- Ex.5: Implement PiValueProvider interface with lambda: () -> 3.1415.
+- Ex.6: Sort with sort((o1, o2) -> Integer.compare(o1.toString().length(), 
+o2.toString().length())).
+- Ex.7: Reverse comparator parameters: sort((o1, o2) -> Integer.compare
+(o2.toString().length(), o1.toString().length())).
 
-Level 3: This level introduces the use of lambdas and streams applied to a custom 
-class, Alumne, to simulate real-life situations. You will filter and transform lists 
-of objects, applying multiple conditions and actions. This will help you understand 
-the practical value of these tools in more realistic projects with structured data.
+### Key concepts demostrated
+- Ex.1: Stream filtering with lambda predicates and forEach terminal operation.
+- Ex.2: Multiple filter conditions with logical operators in lambda expressions.
+- Ex.3: Lambda expressions as Consumer parameter for forEach iteration.
+- Ex.4: Method references as concise alternative to simple lambdas.
+- Ex.5: Custom functional interface implementation using lambda expressions.
+- Ex.6: Custom comparator using lambda for sorting by string length.
+- Ex.7: Descending order sorting by swapping comparator parameters.
+- Ex.8: Functional interface with parameter and return value using lambda.
 
 ## Features
-- Gain fluency in using lambdas and streams through practical exercises, from less 
-to more complex, and to put into practice the new functional thinking habits that 
-these tools provide.
+- Interactive console menu for exercise selection and execution
+- Complete implementation of all 8 Level 1 exercises
+- Reusable functional interfaces for common operations
+- Clean separation of data generation, processing, and presentation
+- Input validation and user-friendly interface
+- Option to run all exercises sequentially
 
 ## Technologies
 - Language: Java
-- IDE: IntelliJ IDEA
-- Build Tool: Maven/Gradle (if applicable)
+- IDE: IntelliJ IDEA (Community Extension version)
 - Version Control: Git
 
 ## Installation and Execution
