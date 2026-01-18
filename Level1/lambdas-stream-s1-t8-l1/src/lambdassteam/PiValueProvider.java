@@ -2,5 +2,5 @@ package lambdassteam;
 
 @FunctionalInterface
 public interface PiValueProvider {
-    public void getPiValue();
+    public double getPiValue();
 }
