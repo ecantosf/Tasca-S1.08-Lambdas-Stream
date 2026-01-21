@@ -15,8 +15,8 @@ public class MenuExercises {
             int choice = getUserChoice();
 
             switch (choice) {
-                case 1 -> LambdaProcessor.countriesWithO();
-                case 2 -> LambdaProcessor.countriesWithOAnd5();
+                case 1 -> LambdaProcessor.printCountriesWithO();
+                case 2 -> LambdaProcessor.countriesWithMore5Letters();
                 case 3 -> LambdaProcessor.monthWithLambda();
                 case 4 -> LambdaProcessor.monthWithReference();
                 case 5 -> LambdaProcessor.piAsDouble();
@@ -43,7 +43,7 @@ public class MenuExercises {
         System.out.println("          LAMBDAS & STREAMS EXERCISES MENU");
         System.out.println("=".repeat(50));
         System.out.println("1. Countries containing 'o'");
-        System.out.println("2. Countries with 'o' and 5 letters");
+        System.out.println("2. Countries with more than 5 letters");
         System.out.println("3. Months list (with Lambda)");
         System.out.println("4. Months list (with Method Reference)");
         System.out.println("5. PI value as Double");
@@ -80,7 +80,7 @@ public class MenuExercises {
         LambdaProcessor.countriesWithO();
         System.out.println();
 
-        LambdaProcessor.countriesWithOAnd5();
+        LambdaProcessor.countriesWithMore5Letters();
         System.out.println();
 
         LambdaProcessor.monthWithLambda();

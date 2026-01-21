@@ -1,26 +1,27 @@
 package lambdassteam;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static lambdassteam.DataGenerator.getstringToReverse;
 
 public class LambdaProcessor {
 
-    public static void countriesWithO() {
+    public static List<String> countriesWithO() {
         List<String> countries = DataGenerator.getCountriesList();
 
-        System.out.println("\nExercise 1:");
-
-        System.out.println("\nComplete list of countries:");
-        countries.forEach(System.out::println);
-
-        System.out.println("\nList of countries containing 'o':");
-        countries.stream()
+        return countries.stream()
                 .filter(country -> country.toLowerCase().contains("o"))
-                .forEach(System.out::println);
+                .collect(Collectors.toList());
     }
 
-    public static void countriesWithOAnd5() {
+    public static void printCountriesWithO() {
+        List<String> countries = countriesWithO();
+        System.out.println("\nList of countries containing 'o':");
+        countries.forEach(System.out::println);
+    }
+
+    public static void countriesWithMore5Letters() {
         List<String> countries = DataGenerator.getCountriesList();
 
         System.out.println("\nExercise 2:");
@@ -28,9 +29,9 @@ public class LambdaProcessor {
         System.out.println("\nComplete list of countries:");
         countries.forEach(System.out::println);
 
-        System.out.println("\nList of countries containing 'o' And 5 letters:");
+        System.out.println("\nList of countries containing more than 5 letters:");
         countries.stream()
-                .filter(country -> country.toLowerCase().contains("o") && country.length() == 5)
+                .filter(country -> country.length() > 5)
                 .forEach(System.out::println);
     }
 
