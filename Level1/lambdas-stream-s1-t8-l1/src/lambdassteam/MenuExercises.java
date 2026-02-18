@@ -1,6 +1,7 @@
 package lambdassteam;
 
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 public class MenuExercises {
@@ -15,8 +16,14 @@ public class MenuExercises {
             int choice = getUserChoice();
 
             switch (choice) {
-                case 1 -> LambdaProcessor.printCountriesWithO();
-                case 2 -> LambdaProcessor.countriesWithMore5Letters();
+                case 1 -> {
+                    List<String> result = LambdaProcessor.getCountriesWithO();
+                    System.out.println("\nCountries containing 'o': " + result);
+                }
+                case 2 -> {
+                    List<String> result = LambdaProcessor.getCountriesWithOAndMoreThan5Letters();
+                    System.out.println("\nCountries with 'o' and more than 5 letters: " + result);
+                }
                 case 3 -> LambdaProcessor.monthWithLambda();
                 case 4 -> LambdaProcessor.monthWithReference();
                 case 5 -> LambdaProcessor.piAsDouble();
@@ -77,26 +84,15 @@ public class MenuExercises {
         System.out.println("         RUNNING ALL EXERCISES");
         System.out.println("=".repeat(50));
 
-        LambdaProcessor.countriesWithO();
-        System.out.println();
-
-        LambdaProcessor.countriesWithMore5Letters();
-        System.out.println();
+        System.out.println("\nExercise 1: " + LambdaProcessor.getCountriesWithO());
+        System.out.println("\nExercise 2: " + LambdaProcessor.getCountriesWithOAndMoreThan5Letters());
 
         LambdaProcessor.monthWithLambda();
-        System.out.println();
-
         LambdaProcessor.monthWithReference();
-        System.out.println();
-
         LambdaProcessor.piAsDouble();
-        System.out.println();
 
-        LambdaProcessor.orderMixedListWithLambda();
-        System.out.println();
-
-        LambdaProcessor.orderDescendantMixedListWithLambda();
-        System.out.println();
+        System.out.println("\nExercise 6: " + LambdaProcessor.orderMixedListWithLambda());
+        System.out.println("\nExercise 7: " + LambdaProcessor.orderDescendantMixedListWithLambda());
 
         LambdaProcessor.reverseString();
 
